@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HtmlCssJs Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator-row">
+            <input type="text" id="result">
+            <button id="backspace-button" onclick="backspace()">Backspace</button>
+        </div>
+        <div class="calculator-row">
+            <button id="clear-key" onclick="clearResult()">C</button>
+            <button class="operation-key" onclick="appendValue('Math.sqrt(')">√</button>
+            <button class="operation-key" onclick="appendValue('(')">(</button>
+            <button class="operation-key" onclick="appendValue(')')">)</button>
+        </div>
+        <div class="calculator-row">
+            
+            <div class="power">
+                <button class="power-key" onclick="appendValue('Math.pow(')">x^</button>
+                <button class="power-comma" onclick="appendValue(',')">,</button>
+            </div>
+            <button class="operation-key" onclick="appendValue('Math.sin(')">sin</button>
+            <button class="operation-key" onclick="appendValue('Math.cos(')">cos</button>
+            <button class="operation-key" onclick="appendValue('Math.tan(')">tan</button>
+        </div>
+        <div class="calculator-row">
+            
+            <button class="calculator-key" onclick="appendValue('7')">7</button>
+            <button class="calculator-key" onclick="appendValue('8')">8</button>
+            <button class="calculator-key" onclick="appendValue('9')">9</button>
+            <button class="operation-key" onclick="appendValue('/')">/</button>
+        </div>
+        <div class="calculator-row">
+            <button class="calculator-key" onclick="appendValue('4')">4</button>
+            <button class="calculator-key" onclick="appendValue('5')">5</button>
+            <button class="calculator-key" onclick="appendValue('6')">6</button>
+            <button class="operation-key" onclick="appendValue('*')">*</button>
+        </div>
+        <div class="calculator-row">
+            <button class="calculator-key" onclick="appendValue('1')">1</button>
+            <button class="calculator-key" onclick="appendValue('2')">2</button>
+            <button class="calculator-key" onclick="appendValue('3')">3</button>
+            <button class="operation-key" onclick="appendValue('-')">-</button>
+        </div>
+        <div class="calculator-row">
+            <button id="equals-key" onclick="calculate()">=</button>
+            <button class="calculator-key" onclick="appendValue('0')">0</button>
+            <button class="calculator-key" onclick="appendValue('.')">.</button>
+            <button class="operation-key" onclick="appendValue('+')">+</button>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
